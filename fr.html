@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Life Sciences Consulting | Chimie des Procédés & Fabrication GMP | Suisse</title>
+    <meta name="description" content="Ready Life Sciences Consulting : Conseil en chimie des procédés et sciences de la vie spécialisé dans les évaluations de risques de nitrosamines, la fabrication GMP et le développement de procédés pour les entreprises pharmaceutiques en Suisse.">
+    <link rel="canonical" href="https://readylifesciences.ch/fr">
+    <link rel="alternate" hreflang="en" href="https://readylifesciences.ch/">
+    <link rel="alternate" hreflang="fr" href="https://readylifesciences.ch/fr">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            min-height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333333;
+            height: 100%;
+        }
+
+        .logo img {
+            height: 120px;
+            width: auto;
+            display: block;
+            margin: 0;
+        }
+
+        .logo-tagline {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #666666;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666666;
+            font-weight: 400;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #333333;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        .language-switcher a {
+            padding: 4px 8px;
+            border: 1px solid #e0e0e0;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            color: #666666;
+            transition: all 0.3s ease;
+        }
+
+        .language-switcher a:hover {
+            background: #f0f0f0;
+        }
+
+        .language-switcher a.active {
+            background: #2c5aa0;
+            color: white;
+            border-color: #2c5aa0;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 0 100px;
+            text-align: center;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            color: #333333;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h2 {
+            font-size: 1.3rem;
+            margin-bottom: 4rem;
+            color: #666666;
+            font-weight: 400;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .rapid-response-badge {
+            display: inline-block;
+            background: #2c5aa0;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 3rem;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border: 2px solid #333333;
+            background: transparent;
+            color: #333333;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .btn-primary {
+            background: #333333;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #555555;
+            border-color: #555555;
+        }
+
+        .btn-secondary:hover {
+            background: #333333;
+            color: white;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .section-alt {
+            background: #fafafa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333333;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666666;
+            margin-bottom: 6rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .service-item {
+            text-align: left;
+            padding: 0;
+        }
+
+        .service-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #333333;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .service-item p {
+            color: #666666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-features li {
+            color: #666666;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .service-features li:before {
+            content: "•";
+            color: #2c5aa0;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Focus Areas */
+        .focus-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .focus-divider {
+            width: 60px;
+            height: 2px;
+            background: #2c5aa0;
+            margin: 1rem auto 2rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: #f8f8f8;
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 0;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #2c5aa0;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #333333;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-description {
+            font-size: 0.9rem;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #666666;
+            line-height: 1.7;
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .languages {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .language-item {
+            background: #f0f0f0;
+            color: #333333;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            color: #333333;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item h4 {
+            color: #333333;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .contact-item a {
+            color: #666666;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a:hover {
+            color: #333333;
+        }
+
+        .contact-phone {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: #2c5aa0;
+        }
+
+        .emergency-info {
+            background: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-top: 2rem;
+        }
+
+        .emergency-info h4 {
+            color: #333333;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .emergency-info p {
+            color: #666666;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Form */
+        .contact-form h3 {
+            color: #333333;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333333;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e0e0e0;
+            background: white;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #333333;
+        }
+
+        /* Footer */
+        footer {
+            background: #f8f8f8;
+            padding: 2rem 0;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .footer-content p {
+            color: #666666;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: #666666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #333333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .services-grid {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo Ready Life Sciences">
+                Ready Life Sciences Consulting
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="language-switcher">
+                    <a href="index.html">EN</a>
+                    <a href="fr.html" class="active">FR</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Expertise en Chimie des Procédés & Sciences de la Vie</h1>
+            <h2>Conseil spécialisé en chimie des procédés et sciences du vivant pour l'industrie pharmaceutique et biotechnologique. Expert PhD proposant des solutions sur mesure et une intervention rapide pour vos projets de R&D, développement de procédés et production sous GMP en Suisse romande.</h2>
+            <div class="cta-buttons">
+                <a href="mailto:readylifesciences@hotmail.com" class="btn btn-primary">Nous Contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">Réactif</div>
+                    <div class="stat-label">Intervention</div>
+                    <div class="stat-description">Disponibilité immédiate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Adaptable</div>
+                    <div class="stat-label">Solutions</div>
+                    <div class="stat-description">Réponse sur mesure</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Personnalisé</div>
+                    <div class="stat-label">Accompagnement</div>
+                    <div class="stat-description">Expertise ciblée</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle" style="text-align: justify;">
+                Expertise spécialisée en sciences du vivant et chimie des procédés pour l'industrie pharmaceutique et biotechnologique de Suisse romande. Interventions ciblées et réactives dans les cantons de Genève, Vaud, Neuchâtel, Fribourg, Berne et Valais.
+            </p>
+
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <p style="color: #666666; line-height: 1.7; text-align: center; max-width: 800px; margin: 0 auto;">
+                    <strong>Zones d'intervention prioritaires :</strong> Genève, Lausanne, Vaud, Neuchâtel, Fribourg, Berne, Valais<br><br>
+                    <strong>Secteurs :</strong> Industrie pharmaceutique, Biotechnologies, CDMO, CRO<br><br>
+                    <strong>Domaines d'expertise :</strong> R&D, Développement de procédés et production sous GMP de principes actifs
+                </p>
+            </div>
+
+            <div class="focus-header">
+                <h3 style="font-size: 1.2rem; color: #666666; font-weight: 400;">Domaines d'Expertise</h3>
+                <div class="focus-divider"></div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Développement & Montée en Échelle de Procédés</h3>
+                    <p>Transformation de vos procédures laboratoire en procédés industriels robustes et reproductibles. Expertise complète de l'optimisation laboratoire aux campagnes pilotes jusqu'à 1000L, avec expérience pratique de l'encadrement d'équipes techniques et de la supervision d'opérations unitaires complètes : chargement des réactifs, extractions, distillations, filtrations et séchage.</p>
+                    <ul class="service-features">
+                        <li>Sélection de voies de synthèse et études technico-économiques</li>
+                        <li>Transfert d'échelle du laboratoire au pilote (50L-1000L)</li>
+                        <li>Résolution de dysfonctionnements procédés et optimisation des rendements</li>
+                        <li>Mise en œuvre de biocatalyse et optimisation enzymatique</li>
+                        <li>Études de robustesse et d'espace de conception</li>
+                        <li>Analyses de risques (nitrosamines, impuretés génotoxiques)</li>
+                        <li>Élaboration de modes opératoires de production</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3>Production sous GMP et Support Réglementaire CMC</h3>
+                    <p>Pilotage opérationnel de campagnes de production conformes aux Good Manufacturing Practices et résolution de problématiques de production. Expertise dans la formation d'équipes opérationnelles en préparation de campagnes et supervision de cycles complets de production : rédaction documentaire technique, qualification d'équipements, lancement de production, contrôles en cours de procédé et finalisation des dossiers de lot, garantissant la conformité réglementaire tout en optimisant les performances de production.</p>
+                    <ul class="service-features">
+                        <li>Rédaction de documentation technique de fabrication</li>
+                        <li>Planification et conduite de campagnes sous GMP</li>
+                        <li>Validation et approbation de dossiers de lot</li>
+                        <li>Investigation et traitement des déviations qualité</li>
+                        <li>Support à la qualification et validation d'équipements</li>
+                        <li>Audits fournisseurs et qualification matières premières</li>
+                        <li>Mise en œuvre CAPA et évaluation d'efficacité</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3>Intervention Rapide et Solutions Flexibles</h3>
+                    <p>Vous faites face à des défis techniques urgents ou à des besoins ponctuels de renforcement d'équipes ? Basé à Lausanne avec disponibilité immédiate en Suisse romande, j'interviens rapidement dans les cantons de Genève, Vaud, Neuchâtel, Fribourg, Berne et Valais. Qu'il s'agisse de résoudre des problématiques de production critiques, d'apporter une expertise complémentaire sur des projets stratégiques, ou de pallier temporairement des lacunes d'effectifs, je propose des solutions d'accompagnement adaptées à vos contraintes de délais et de localisation.</p>
+                    <ul class="service-features">
+                        <li>Basé à Lausanne, cœur de la Suisse romande</li>
+                        <li>Intervention rapide : Genève, Vaud, Neuchâtel, Fribourg, Berne, Valais</li>
+                        <li>Missions courtes ou long terme selon vos besoins</li>
+                        <li>Support d'urgence weekends et jours fériés</li>
+                        <li>Planification adaptable et durées modulables</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Pourquoi Choisir Ready Life Sciences</h2>
+            <p class="section-subtitle">
+                Une expertise indépendante qui génère des résultats concrets, sans les contraintes et surcoûts des grandes structures de conseil.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; margin-top: 3rem;">
+                <div style="text-align: left;">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: #333333; font-weight: 500;">Expertise Indépendante</h3>
+                    <p style="color: #666666; line-height: 1.7; margin-bottom: 1rem; text-align: justify;">Accès direct à une expertise de niveau doctoral sans intermédiaires ni surcoûts. Vous collaborez directement avec l'expert, sans passer par plusieurs niveaux hiérarchiques.</p>
+                </div>
+
+                <div style="text-align: left;">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: #333333; font-weight: 500;">Réactivité Opérationnelle</h3>
+                    <p style="color: #666666; line-height: 1.7; margin-bottom: 1rem; text-align: justify;">Basé à Lausanne avec disponibilité immédiate en Suisse romande. Interventions ciblées dans les cantons de Genève, Vaud, Neuchâtel, Fribourg, Berne et Valais, en adaptation complète à vos contraintes de planning et de localisation.</p>
+                </div>
+
+                <div style="text-align: left;">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: #333333; font-weight: 500;">Expérience Terrain</h3>
+                    <p style="color: #666666; line-height: 1.7; margin-bottom: 1rem; text-align: justify;">Expérience opérationnelle acquise en environnements CDMO et CRO, permettant de faire le lien entre innovation scientifique et contraintes de production industrielle, avec une maîtrise complète des exigences GMP.</p>
+                </div>
+
+                <div style="text-align: left;">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: #333333; font-weight: 500;">Communication Multilingue</h3>
+                    <p style="color: #666666; line-height: 1.7; margin-bottom: 1rem; text-align: justify;">Maîtrise du français, de l'anglais et de l'allemand, facilitant les échanges avec tous les acteurs de l'écosystème pharmaceutique et biotechnologique de Suisse romande.</p>
+                </div>
+
+                <div style="text-align: left;">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: #333333; font-weight: 500;">Approche Économique</h3>
+                    <p style="color: #666666; line-height: 1.7; margin-bottom: 1rem; text-align: justify;">Tarification transparente sans frais généraux de structure. Formules d'engagement modulables, du dépannage ponctuel à l'accompagnement projet sur le long terme.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">À Propos</h2>
+            <h3 style="text-align: center; font-size: 1.5rem; color: #666666; font-weight: 400; margin-bottom: 3rem;">Corentin Rumo, PhD</h3>
+            <div class="about-text">
+                <p><strong>Mon profil :</strong> Docteur en chimie de l'Université de Bâle, j'ai développé une expertise transversale couvrant la chimie de synthèse, la biocatalyse, l'optimisation de procédés et la production sous Good Manufacturing Practices. Mon approche permet de faire le pont entre recherche fondamentale et applications industrielles dans les secteurs pharmaceutique et des sciences du vivant. J'ai acquis une expérience opérationnelle significative en environnements CDMO (Contract Development and Manufacturing Organizations) et CRO (Contract Research Organizations), où j'ai accompagné des entreprises pharmaceutiques dans la montée en échelle de leurs procédés du laboratoire à la production commerciale, et développé des solutions de synthèse sur mesure pour des clients biotechnologiques. Francophone natif, je maîtrise parfaitement l'anglais professionnel et possède un niveau opérationnel en allemand (B2).</p>
+                <p><strong>Ma différence par rapport aux grands cabinets de conseil :</strong> J'allie expertise technique approfondie, disponibilité immédiate et adaptabilité totale. Mon offre couvre l'ensemble du cycle de développement produit, de la recherche fondamentale et développement analytique jusqu'à la production industrielle et la conformité réglementaire, me permettant d'adresser des problématiques variées tout au long de votre chaîne de valeur. Disponible immédiatement en Suisse romande et prêt à me déplacer pour des missions dans la région, je vous apporte la ressource experte dont vous avez besoin, au moment où vous en avez besoin.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle" style="margin-bottom: 6rem;">
+                Besoin d'un renfort expert flexible ? Basé à Lausanne avec intervention rapide en Suisse romande : Genève, Vaud, Neuchâtel, Fribourg, Berne et Valais.
+            </p>
+            
+            <div style="text-align: center; margin-top: 5rem;">
+                <p style="font-size: 1.2rem; color: #333333; margin-bottom: 1rem;">
+                    Contactez-nous ! Réponse garantie sous 24h ouvrées : <a href="mailto:readylifesciences@hotmail.com" style="color: #2c5aa0; text-decoration: none;">readylifesciences@hotmail.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p>&copy; 2025 Ready Life Sciences Consulting. Tous droits réservés.</p>
+                    <p>Conseil en Chimie des Procédés & Sciences de la Vie - Suisse Romande</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
